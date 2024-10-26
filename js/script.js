@@ -8,7 +8,7 @@ const slidesHRSpecialistTemplate = `
         </p>
       </div>
       <img
-        src="/img/feature_img_1.png"
+        src="./img/feature_img_1.png"
         alt="Преимущество 1" />
     </li>
     <li class="feature_slide">
@@ -21,7 +21,7 @@ const slidesHRSpecialistTemplate = `
         </p>
       </div>
       <img
-        src="/img/feature_img_2.png"
+        src="./img/feature_img_2.png"
         alt="Преимущество 1" />
     </li>
     <li class="feature_slide">
@@ -33,7 +33,7 @@ const slidesHRSpecialistTemplate = `
         </p>
       </div>
       <img
-        src="/img/feature_img_3.png"
+        src="./img/feature_img_3.png"
         alt="Преимущество 1" />
     </li>
 `;
@@ -48,7 +48,7 @@ const slidesHRDTemplate = `
         </p>
       </div>
       <img
-        src="/img/feature_img_4.png"
+        src="./img/feature_img_4.png"
         alt="Преимущество 1" />
     </li>
     <li class="feature_slide">
@@ -60,7 +60,7 @@ const slidesHRDTemplate = `
         </p>
       </div>
       <img
-        src="/img/feature_img_5.png"
+        src="./img/feature_img_5.png"
         alt="Преимущество 1" />
     </li>
 `;
