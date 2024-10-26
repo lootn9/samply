@@ -610,7 +610,7 @@ input:checked + .slider:before {
 .samply__demo__wrapper .demo__form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
 
   background-color: #fff;
   border-radius: 28px;
@@ -643,7 +643,7 @@ input:checked + .slider:before {
   width: 100%;
   background-color: #fff;
   border: #e6e6e6 solid 1.2px;
-  padding: 8px 20px;
+  padding: 12px 20px;
   border-radius: 8px;
 
   font-family: 'SamplyF';
