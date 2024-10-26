@@ -3,6 +3,7 @@
 :root {
   --main-bg-color: #6e86ee;
   --sec--bg-color: #f6f6f6;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -773,7 +774,7 @@ input:checked + .slider:before {
   align-items: center;
   max-width: 750px;
 
-  gap: 40px;
+  gap: 45px;
   padding: 120px 0;
 }
 
@@ -804,4 +805,23 @@ input:checked + .slider:before {
   font-weight: 300;
   font-style: normal;
   color: #000;
+}
+
+.samply__scroll__demo {
+  background-color: var(--main-bg-color);
+  color: #fff;
+
+  font-family: 'SamplyF';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+
+  text-align: center;
+
+  padding: 15px 20px;
+  border-radius: 45px;
+
+  cursor: pointer;
+
+  min-width: 300px;
 }
