@@ -68,8 +68,8 @@ const slidesHRDTemplate = `
 const formSentHTML =
   '<p class="success_message">Спасибо, мы свяжемся с Вами в ближайшее время!</p>';
 
-const imgB2BPath = '/img/b2b_scheme.png';
-const imgB2CPath = '/img/b2c_scheme.png';
+const imgB2BPath = './img/b2b_scheme.png';
+const imgB2CPath = './img/b2c_scheme.png';
 
 /* Callback-функции */
 
