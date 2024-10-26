@@ -825,3 +825,8 @@ input:checked + .slider:before {
 
   min-width: 300px;
 }
+
+#header {
+  position: sticky;
+  top: 0;
+}
