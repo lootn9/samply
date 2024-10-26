@@ -1,0 +1,774 @@
+/* Сброс стилей */
+
+:root {
+  --main-bg-color: #6e86ee;
+  --sec--bg-color: #f6f6f6;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+em {
+  font-style: normal;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.samply__section__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Хедер */
+
+.samply__header {
+  min-height: 105px;
+  min-width: 100%;
+  background-color: var(--main-bg-color);
+  border-radius: 0 0 40px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.samply__text__logo {
+  text-transform: uppercase;
+  font-family: 'SamplyF';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 35px;
+  color: #fff;
+  padding-left: 50px;
+}
+
+.samply__header img {
+  height: 75px;
+  padding-right: 100px;
+}
+
+/* О продукте */
+
+.about_samply_text {
+  font-family: 'SamplyF';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+
+  max-width: 400px;
+
+  padding: 35px;
+  border-radius: 30px;
+  background-color: #6e86ee;
+  color: #fff;
+
+  flex: 4;
+}
+
+.about_samply_text b {
+  font-family: 'SamplyF';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+  color: #fff;
+}
+
+/* Сэмпли помогает... */
+
+.samply__positioning__wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+
+  max-width: 920px;
+  margin: 60px 0;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* Правая сторона */
+
+.samply__positioning__wrapper p:nth-child(2) {
+  background-color: var(--sec--bg-color);
+  border-radius: 30px;
+  padding: 40px;
+
+  font-family: 'SamplyF';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 22px;
+
+  flex: 6;
+}
+
+.samply__positioning__wrapper p:nth-child(2) b {
+  font-family: 'SamplyF';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 22px;
+}
+
+/* Кому полезен сервис */
+
+.samply__ta__wrapper {
+  background-color: var(--sec--bg-color);
+  min-height: 200px;
+  min-width: 920px;
+  border-radius: 35px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.for_ta_title {
+  font-family: 'SamplyF';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 25px;
+  color: #000;
+  text-align: center;
+
+  padding: 35px 0;
+}
+
+.role__buttons,
+.samply__b2c__b2b {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.role__button,
+.button_b2b,
+.button_b2c {
+  background-color: #ececec;
+  font-family: 'SamplyF';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+
+  padding: 10px 20px;
+  border-radius: 45px;
+
+  cursor: pointer;
+}
+
+.role__button.active,
+.button_b2b.active,
+.button_b2c.active {
+  background-color: var(--main-bg-color);
+  color: #fff;
+}
+
+.role__button:hover,
+.button_b2b:hover,
+.button_b2c:hover,
+.send_demo_request:hover {
+  transform: translateY(-3px);
+  transition: transform 200ms ease-in-out;
+}
+
+.samply__features_slider {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  margin: 50px 0;
+}
+
+.feature_slide {
+  max-width: 700px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fff;
+  border-radius: 25px;
+
+  padding: 35px 30px;
+
+  min-width: 700px;
+  /* max-height: 300px; */
+}
+
+.feature_slide .title {
+  font-family: 'SamplyF';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+  color: #000;
+
+  margin-bottom: 15px;
+}
+
+.feature_slide .text {
+  font-family: 'SamplyF';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+  color: #000;
+}
+
+.feature_slide img {
+  width: 200px;
+  height: auto;
+  display: inline;
+}
+
+.left_arrow svg:hover,
+.right_arrow svg:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  transition: transform 200ms ease-in-out;
+}
+
+/* К Сэмпли обращаются */
+
+.samply__scenarios__wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+  max-width: 700px;
+  margin-top: 60px;
+}
+
+.samply__scenarios__left {
+  flex: 2;
+}
+
+.samply__scenarios__left .title {
+  font-family: 'SamplyF';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 26px;
+  color: #000;
+
+  margin-bottom: 20px;
+}
+
+.samply__scenarios__left .text {
+  font-family: 'SamplyF';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.samply__scenarios__right {
+  flex: 3;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.samply__scenarios__right ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+  font-family: 'SamplyF';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+  color: #000;
+}
+
+.samply__scenarios__right ul svg {
+  max-height: 20px;
+  transform: translateY(2px);
+  flex: 2;
+}
+
+.samply__scenarios__right ul p {
+  flex: 25;
+}
+
+/* Как работает сервис */
+
+.samply__how__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.samply__how__wrapper p {
+  font-family: 'SamplyF';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 25px;
+  color: #000;
+  text-align: center;
+
+  padding: 60px 0 40px 0;
+}
+
+/* Схема работы */
+
+.samply__how__wrapper .img__wrapper {
+  background-color: var(--sec--bg-color);
+  min-height: 200px;
+  min-width: 800px;
+  border-radius: 35px;
+
+  margin: 40px 0 60px 0;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 50px;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.samply__how__wrapper .img__wrapper img {
+  max-width: 600px;
+}
+
+/* Включаем Сэмпли для вас?*/
+
+.samply__turn__on__wrapper {
+  max-width: 800px;
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: row;
+
+  gap: 10px;
+
+  margin: 40px 0;
+}
+
+/* Левый заголовок */
+
+.samply__turn__on__wrapper > p {
+  font-family: 'SamplyF';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  color: #000;
+
+  padding: 0 30px 0 50px;
+  flex: 1;
+}
+
+/* Карточка */
+
+.samply__turn__on__wrapper .turning_on_card {
+  background-color: var(--sec--bg-color);
+  border-radius: 45px;
+
+  padding: 40px;
+  flex: 2;
+}
+
+.turning_on_card .toggler_and_logo {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+
+  margin-bottom: 20px;
+}
+
+/* Переключатель */
+
+.toggler {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 34px;
+}
+
+.toggler input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eaeaea;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 5px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--main-bg-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #6e86ee;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(34px);
+  -ms-transform: translateX(34px);
+  transform: translateX(34px);
+}
+
+/* Скругление */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Верх карточки */
+.samply__toggler {
+  background-color: #fff;
+  padding: 12px 16px;
+  border-radius: 28px;
+}
+
+.toggler_and_logo .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  font-family: 'SamplyF';
+  font-weight: 600;
+  font-style: normal;
+  font-size: 30px;
+  color: #000;
+
+  text-transform: uppercase;
+}
+
+.turning_on_card.on .logo em {
+  color: var(--main-bg-color);
+}
+
+/* Текст карточки */
+
+.turning_on_card .title,
+.turning_on_card .text {
+  font-family: 'SamplyF';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  color: #000;
+
+  margin-bottom: 20px;
+  padding: 0 10px;
+}
+
+.turning_on_card .text {
+  font-weight: 350;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.turning_on_card .text em {
+  color: var(--main-bg-color);
+  font-weight: 400;
+}
+
+/* Карточка Samply OFF */
+
+.turning_on_card.off .logo em {
+  color: #acacae;
+}
+
+.turning_on_card > ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.turning_on_card > ul > li {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+
+  padding: 0 10px;
+}
+
+.turning_on_card > ul > li > svg {
+  min-width: 25px;
+
+  flex: 1;
+}
+
+.turning_on_card > ul > li > .container {
+  flex: 99;
+
+  font-family: 'SamplyF';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+
+  color: #000;
+}
+
+.turning_on_card > ul > li > .container .subtitle {
+  margin-bottom: 10px;
+}
+
+.turning_on_card > ul > li > .container .subtext {
+  font-weight: 300;
+}
+
+/* Контактная форма */
+
+.samply__demo__wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+  min-height: 300px;
+  width: 800px;
+
+  background-color: var(--sec--bg-color);
+  border-radius: 30px;
+
+  margin: 50px 0;
+  padding: 50px 60px;
+}
+
+/* Текст формы */
+
+.samply__demo__wrapper > .text {
+  flex: 2;
+
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'SamplyF';
+  font-style: normal;
+  color: #000;
+
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.samply__demo__wrapper > .text > p:nth-child(1) {
+  font-weight: 500;
+  font-size: 26px;
+}
+
+.samply__demo__wrapper > .text > p:nth-child(2) {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.samply__demo__wrapper .demo__form {
+  flex: 3;
+}
+
+/* Форма */
+.samply__demo__wrapper .demo__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  background-color: #fff;
+  border-radius: 28px;
+
+  padding: 30px 40px;
+}
+
+.samply__demo__wrapper .demo__form .text {
+  font-family: 'SamplyF';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+
+  color: #000;
+}
+
+.samply__demo__wrapper .demo__form > fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  color: #e6e6e6;
+}
+
+/* Стилизация полей формы*/
+
+.samply__demo__wrapper .demo__form > fieldset input,
+.samply__demo__wrapper .demo__form > fieldset select,
+.samply__demo__wrapper .demo__form > fieldset option {
+  width: 100%;
+  background-color: #fff;
+  border: #e6e6e6 solid 1.2px;
+  padding: 8px 20px;
+  border-radius: 8px;
+
+  font-family: 'SamplyF';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 14px;
+
+  color: #000;
+}
+
+.samply__demo__wrapper .demo__form > fieldset input:focus {
+  color: #000;
+}
+
+.samply__demo__wrapper .demo__form > fieldset select,
+.samply__demo__wrapper .demo__form > fieldset input::placeholder,
+.samply__demo__wrapper .demo__form > fieldset select::placeholder {
+  color: #c3c1c1;
+}
+
+.samply__demo__wrapper .demo__form > fieldset > fieldset {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* Ошибка в поле – form_field_error */
+.demo__form > fieldset > fieldset .form_field_error input,
+.demo__form > fieldset > fieldset .form_field_error select,
+.demo__form > fieldset > .form_field_error input {
+  border: #ff4949 solid 1.2px;
+}
+
+.demo__form > fieldset .form_field[id='field_name'],
+.demo__form > fieldset .form_field[id='field_role'] {
+  width: 50%;
+}
+
+.demo__form > fieldset .form_field p {
+  display: none;
+}
+
+.demo__form > fieldset .form_field.form_field_error p {
+  display: block;
+
+  font-family: 'SamplyF';
+  font-weight: 300;
+  font-style: normal;
+  font-size: 12px;
+  color: #ff4949;
+
+  margin: 5px 0 0 5px;
+}
+
+/* Кнопка формы */
+.send_demo_request {
+  background-color: var(--main-bg-color);
+  color: #fff;
+
+  font-family: 'SamplyF';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+
+  text-align: center;
+
+  padding: 10px 20px;
+  border-radius: 45px;
+
+  cursor: pointer;
+}
+
+/* Отправка формы */
+
+.demo__form .success_message {
+  font-family: 'SamplyF';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  text-align: center;
+
+  padding: 10px 0;
+}
+
+/* Доработка слайдера */
+
+.samply__slides__container {
+  /* height: calc(100vh - 2rem); */
+  width: 100%;
+  display: flex;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  max-width: 700px;
+
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Фикс скролбара */
+.samply__slides__container::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+/* Свитч текста на карточке */
+
+.turning_on_card.off .title,
+.turning_on_card.off .text {
+  display: none;
+}
+
+.turning_on_card.on .title.off,
+.turning_on_card.on ul {
+  display: none;
+}
