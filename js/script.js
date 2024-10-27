@@ -71,6 +71,14 @@ const formSentHTML =
 const imgB2BPath = './img/b2b_scheme.png';
 const imgB2CPath = './img/b2c_scheme.png';
 
+const formEndpoint = 'https://formspree.io/f/xldegblb';
+
+const rolesObj = {
+  1: 'Рекрутер',
+  2: 'HR-директор',
+  3: 'Другое',
+};
+
 /* Callback-функции */
 
 const nextButtonCallback = () => {
@@ -257,6 +265,49 @@ const checkEmailField = () => {
   return emailPattern.test(fieldEmail.value);
 };
 
+const sendRemoteForm = async (userName, userRole, userPhone, userEmail) => {
+  const formData = new FormData(); // Пустая форма
+
+  // Заполнение реквизитов
+  formData.append('userName', userName);
+  //заменяем id роли на название
+  //здесь не нужна проверка, т.к. значения полей проверены
+  formData.append('userRole', rolesObj[userRole]);
+  formData.append('userPhone', userPhone);
+  formData.append('userEmail', userEmail);
+
+  // Отправлен запрос
+  console.log('Отправляем запрос');
+
+  fetch(formEndpoint, {
+    method: 'POST',
+    body: formData,
+    headers: {
+      Accept: 'application/json',
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        console.log('Форма ОК');
+      } else {
+        response.json().then((data) => {
+          if (Object.hasOwn(data, 'errors')) {
+            console.log(
+              data['errors'].map((error) => error['message']).join(', ')
+            );
+          } else {
+            console.log('Хмм! Ошибка при отправке');
+          }
+        });
+      }
+    })
+    .catch((error) => {
+      console.log('Хмм! Ошибка при отправке');
+    });
+
+  console.log('Код отработал');
+};
+
 const checkFormByButton = async () => {
   isNameCorrect = checkNameField();
   isRoleCorrect = checkRoleField();
@@ -268,12 +319,21 @@ const checkFormByButton = async () => {
   if (isNameCorrect && isRoleCorrect && isPhoneCorrect && isEmailCorrect) {
     //если все норм, отправляем форму
 
-    // обнуляем значения в полях
+    // получаем поля
     const fieldName = document.getElementById('name');
     const fieldRole = document.getElementById('role');
     const fieldPhone = document.getElementById('phone');
     const fieldEmail = document.getElementById('email');
 
+    // Отправка удаленной формы
+    sendRemoteForm(
+      fieldName.value,
+      fieldRole.value,
+      fieldPhone.value,
+      fieldEmail.value
+    );
+
+    // обнуляем значения в полях
     fieldName.value = '';
     fieldRole.value = '';
     fieldPhone.value = '';
